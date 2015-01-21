@@ -1,0 +1,29 @@
+{
+  "name": "md-preview",
+  "version": "0.0.0",
+  "description": "A cross-platform markdown preview",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex31481/md-preview.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Alex Liang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex31481/md-preview/issues"
+  },
+  "homepage": "https://github.com/alex31481/md-preview",
+  "dependencies": {
+    "browser-sync": "^1.9.0",
+    "gulp": "^3.8.9",
+    "gulp-load-plugins": "^0.7.0",
+    "wiredep": "^1.4.3"
+
+  }
+}
