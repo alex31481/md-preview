@@ -1,2 +1,4 @@
 app/vendor
 node_modules
+
+*.swp
