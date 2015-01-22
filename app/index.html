@@ -10,9 +10,11 @@
 
 </head>
 
-<body>
+<body ng-app="mdPreview">
 
-  Hello World!!!!
+    <div ng-view>
+    </div>
+    <script src="marked.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="vendor/jquery/dist/jquery.js"></script>
@@ -25,6 +27,26 @@
     <script src="vendor/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script type="text/javascript">
+        var mdPreview = angular.module('mdPreview', ['ngRoute',
+            'ui.bootstrap', 'hc.marked'
+        ]);
+        mdPreview.config(function($routeProvider)
+        {
+            $routeProvider.when('/mdpreview/:file',
+            {
+              template: '<div ng-if="value==null">MarkDown file not supplied</div><marked ng-include src="value"></marked>',
+                controller: function($scope,$routeParams)
+                {
+                    $scope.value = $routeParams.file;
+                }
+            }).otherwise(
+            {
+                redirectTo: '/mdpreview'
+            });
+
+        })
+    </script>
 </body>
 
 </html>
