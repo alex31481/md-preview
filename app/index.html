@@ -2,12 +2,7 @@
 
 <head>
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
-    
-    <!-- endbower -->
-    <!-- endbuild -->
     <link rel="stylesheet" href="github-markdown.css" />
     <style>
         .markdown-body {
@@ -22,24 +17,15 @@
 
 <body ng-app="mdPreview">
 
-    <div ng-view>
-    </div>
+    <div ng-view></div>
     <script src="marked.js"></script>
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="vendor/jquery/dist/jquery.js"></script>
-    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="vendor/angular/angular.js"></script>
-    <script src="vendor/angular-ui-utils/ui-utils.js"></script>
-    <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="vendor/moment/moment.js"></script>
-    <script src="vendor/angular-marked/angular-marked.js"></script>
-    <script src="vendor/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="jquery.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-marked.min.js"></script>
+    <script src="angular-route.min.js"></script>
     <script type="text/javascript">
         var mdPreview = angular.module('mdPreview', ['ngRoute',
-            'ui.bootstrap', 'hc.marked'
+            'hc.marked'
         ]);
         mdPreview.config(function($routeProvider)
         {
